@@ -7,4 +7,4 @@ sudo su -
 apt update -y
 apt install apache2 -y
 service apache2 start
-echo "WELCOME TO SERVER NO. $(hostname -i)" > /var/www/html/index.html
+echo "MY SERVER" > /var/www/html/index.html
