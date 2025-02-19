@@ -1,6 +1,9 @@
+-------------------------------------------
 # UBUNTU 22.04
+-------------------------------------------
 # Installing Apache (apache2)
 # REF: https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04
+-------------------------------------------
 
 #!/bin/bash									
 sudo su -									
@@ -8,3 +11,11 @@ apt update -y
 apt install apache2 -y
 service apache2 start
 echo "MY SERVER" > /var/www/html/index.html
+
+-------------------------------------------
+# How to modify default port 80 of Apache?
+-------------------------------------------
+
+vi /etc/apache2/ports.conf
+# Change Listen 80 --> <other-port-no>
+systemctl restart apache2   # For Debian/Ubuntu
